@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: InstagramFont;
+    src: url('/public/fonts/instagramFont.otf');
+}
