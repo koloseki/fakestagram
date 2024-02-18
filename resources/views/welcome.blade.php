@@ -90,7 +90,7 @@
                     <a>More</a>
                 </button>
 
-                <dialog id="MoreDialog" class="sm:absolute  m-0 p-6 text-right z-10 row-span-2 col-span-6 bg-red-400 ">
+                <dialog open id="MoreDialog" class="sm:absolute  m-0 p-6 text-right z-10 row-span-2 col-span-6 bg-red-400 ">
                 @auth
                         <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900  focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
 
@@ -106,8 +106,8 @@
 
         </nav>
         <main class="flex-1 justify-content-center mx-64">
-            <div class="row flex justify-center mt-16 mx-64 pr-44 border">
-                <div class="border flex align-content-center m-16">
+            <div class="row flex justify-center mt-16 mx-64 pr-44 ">
+                <div class=" flex align-content-center m-16">
 
                     <img  src="https://pyxis.nymag.com/v1/imgs/031/f3a/3dc8d24958c4a3fd3a8487b49a7f71a45f-lofi-girl.1x.rsquare.w1400.png" alt="Profile picture" class="w-40 h-40 rounded-full" />
                 </div>
@@ -127,7 +127,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-3 row justify-content-center border mx-64 px-32">
+            <div class="grid grid-cols-3 row justify-content-center  mx-64 px-32">
                 <div class="col-1 border m-1 ">
                     <img src="https://i.pinimg.com/564x/ce/99/d1/ce99d1349a01411f7bc5af09d531424d.jpg" alt="image" class="w-100 aspect-square">
                 </div>
