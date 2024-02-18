@@ -12,9 +12,10 @@
 
         <!-- Styles -->
         @vite('resources/css/app.css')
+
     </head>
-    <body class="antialiased flex col">
-        <nav class="flex-initial  sm:grid grid-cols-7 grid-rows-12  sm:items-center min-h-screen border-1 border-r   sm:h-1 ">
+    <body id="app" class="antialiased flex col">
+        <nav class="fixed flex-initial  sm:grid grid-cols-7 grid-rows-12  sm:items-center min-h-screen border-1 border-r   sm:h-1 ">
         @if (Route::has('login'))
                 <button class="font-instagram sm:relative  ml-5 mt-5 row-span-1 col-span-3  text-2xl font-thin  active:text-gray-500">Fakestagram</button>
 
@@ -104,8 +105,49 @@
             @endif
 
         </nav>
-        <main class="flex-1">
-            Test
+        <main class="flex-1 justify-content-center mx-64">
+            <div class="row flex justify-center mt-16 mx-64 pr-44 border">
+                <div class="border flex align-content-center m-16">
+
+                    <img  src="https://pyxis.nymag.com/v1/imgs/031/f3a/3dc8d24958c4a3fd3a8487b49a7f71a45f-lofi-girl.1x.rsquare.w1400.png" alt="Profile picture" class="w-40 h-40 rounded-full" />
+                </div>
+                <div>
+                    <div class="py-2"><h1 class="text-2xl">lofigirl</h1></div>
+                    <div class="flex row py-2">
+                        <div class="px-3"><strong class="pr-1">967</strong>posts</div>
+                        <div class="px-3"><strong class="pr-1">1.1M</strong>followers</div>
+                        <div class="px-3"><strong class="pr-1">416</strong>following</div>
+                    </div>
+                    <div class="py-2">
+                        🎵 | Study - Chill - Sleep - Repeat<br>
+                        🎹 | Label @lofirecords<br>
+                        👕 | Merch @lofigirlshop<br>
+                        🎨 | Studio @lofistudio<br>
+                        <a class="font-bold" href=https://linkin.bio/lofigirl/">linkin.bio/lofigirl</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 row justify-content-center border mx-64 px-32">
+                <div class="col-1 border m-1 ">
+                    <img src="https://i.pinimg.com/564x/ce/99/d1/ce99d1349a01411f7bc5af09d531424d.jpg" alt="image" class="w-100 aspect-square">
+                </div>
+                <div class="col-2 border m-1">
+                    <img src="https://i.pinimg.com/564x/ca/a8/1c/caa81c53f78d6abb428faf771f250741.jpg" alt="image" class="w-100">
+                </div>
+                <div class="col-3 border m-1">
+                    <img src="https://i.pinimg.com/564x/21/21/83/21218355f168dcfb5ffd2789e9a41556.jpg" alt="image" class="w-100">
+                </div>
+                <div class="col-1 border m-1 ">
+                    <img src="https://i.pinimg.com/564x/48/8c/3d/488c3d2ff60ce74dff843d578b2a615d.jpg" alt="image" class="w-100">
+                </div>
+                <div class="col-2 border m-1 ">
+                    <img src="https://i.pinimg.com/564x/c9/78/6d/c9786daa2ca18e42f062504c7d7597e5.jpg" alt="image" class="w-100 ">
+                </div>
+                <div class="col-3 border m-1 ">
+                    <img src="https://i.pinimg.com/564x/5c/dd/80/5cdd80f73140d31dbd4688a767dbc27b.jpg" alt="image" class="w-100">
+                </div>
+
+            </div>
 
         </main>
     </body>
