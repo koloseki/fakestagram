@@ -59,6 +59,7 @@
                 <dialog open id="MoreDialog" class="sm:absolute top-0  m-0 p-6 text-right z-10 row-span-2 col-span-6 bg-red-400 ">
                     @auth
                         <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900  focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
+                        <a href="{{ route('logout') }}" class="font-semibold text-gray-600 hover:text-gray-900  focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Logout</a>
 
                     @else
                         <a href="{{ route('login') }}" class="ml-4 px-3 py-1 font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded rounded-4 focus:outline focus:outline-2 focus:rounded-sm focus:outline-green-500">Log in</a>
