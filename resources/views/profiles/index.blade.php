@@ -7,10 +7,10 @@
                 <button class="font-instagram sm:relative  ml-5 mt-5 row-span-1 col-span-3  text-2xl font-thin  active:text-gray-500">Fakestagram</button>
 
 
-                <button class="group col-span-7 flex hover:bg-gray-100 mx-4 my-2 py-3 rounded-md">
+                <a role="button" href="{{'url/home'}}" class="group col-span-7 flex hover:bg-gray-100 mx-4 my-2 py-3 rounded-md">
                     <img src="/svg/navbar/home.svg" alt="Home icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
-                    <a>Home</a>
-                </button>
+                    <p class="select-none">Home</p>
+                </a>
                 <button class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md">
                     <img src="/svg/navbar/search.svg" alt="Search icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <a>Search</a>
@@ -35,7 +35,7 @@
                     <img src="/svg/navbar/create.svg" alt="Create icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <p class="select-none">Create</p>
                 </a>
-                <a role="button" href="{{ url('/home') }}" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md ">
+                <a role="button" href="/profile/{{$user->id}}/edit" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md ">
                     <img src="/svg/navbar/profile.svg" alt="Profile icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <p class="select-none">Profile</p>
                 </a>
