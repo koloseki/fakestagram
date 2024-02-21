@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Image;
 
 class PostsContoller extends Controller
 {
@@ -23,11 +26,26 @@ class PostsContoller extends Controller
             'image' => ['required','image'],
         ]);
 
-        auth()->user()->posts()->create($data);
+        $imagePath = \request('image')->store('uploads','public');
+
+        $manager = new ImageManager(new Driver());
+        $image = $manager->read(public_path("storage/{$imagePath}"));
+        $image->cover(1200, 1200,'center');
+
+        $image->save();
+
+        auth()->user()->posts()->create([
+            'caption' => $data['caption'],
+            'image' => $imagePath,
+        ]);
 
 
+        return redirect('/profile/' .auth()->user()->id);
 
+    }
 
-        dd(request()->all());
+    public function show(\App\Models\Post $post)
+    {
+        return view('posts.show',compact('post'));
     }
 }

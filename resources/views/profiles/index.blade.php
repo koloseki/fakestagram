@@ -31,10 +31,10 @@
                     <img src="/svg/navbar/notifications.svg" alt="Notifications icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <a>Notifications</a>
                 </button>
-                <button class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md duration-200 ">
+                <a role="button" href="{{ url('/p/create') }}" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md duration-200 ">
                     <img src="/svg/navbar/create.svg" alt="Create icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
-                    <a>Create</a>
-                </button>
+                    <p class="select-none">Create</p>
+                </a>
                 <a role="button" href="{{ url('/home') }}" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md ">
                     <img src="/svg/navbar/profile.svg" alt="Profile icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <p class="select-none">Profile</p>
@@ -51,7 +51,7 @@
 
                 </a>
 
-                <button onclick="" class="group mb-4 col-span-7 row-span-11 flex hover:bg-gray-100 mx-4 py-3 rounded-md">
+                <button class="group mb-4 col-span-7 row-span-11 flex hover:bg-gray-100 mx-4 py-3 rounded-md">
                     <img src="/svg/navbar/more.svg" alt="More icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <a>More</a>
                 </button>
@@ -82,7 +82,7 @@
             <div>
                 <div class="py-2"><h1 class="text-2xl">{{$user -> username}}</h1></div>
                 <div class="flex flex-row py-2 ">
-                    <div class="pr-6"><strong class="pr-1">967</strong>posts</div>
+                    <div class="pr-6"><strong class="pr-1">{{$user->posts->count()}}</strong>posts</div>
                     <div class="pr-6"><strong class="pr-1">1.1M</strong>followers</div>
                     <div class="pr-6"><strong class="pr-1">416</strong>following</div>
                 </div>
@@ -93,25 +93,13 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-3 row justify-content-center  mx-64 px-32">
-            <div class="col-10 border m-1 ">
-                <img src="https://i.pinimg.com/564x/ce/99/d1/ce99d1349a01411f7bc5af09d531424d.jpg" alt="image" class="w-100">
-            </div>
-            <div class="col-10 border m-1">
-                <img src="https://i.pinimg.com/564x/ca/a8/1c/caa81c53f78d6abb428faf771f250741.jpg" alt="image" class="w-100">
-            </div>
-            <div class="col-10 border m-1">
-                <img src="https://i.pinimg.com/564x/21/21/83/21218355f168dcfb5ffd2789e9a41556.jpg" alt="image" class="w-100">
-            </div>
-            <div class="col-10 border m-1 ">
-                <img src="https://i.pinimg.com/564x/48/8c/3d/488c3d2ff60ce74dff843d578b2a615d.jpg" alt="image" class="w-100">
-            </div>
-            <div class="col-10 border m-1 ">
-                <img src="https://i.pinimg.com/564x/c9/78/6d/c9786daa2ca18e42f062504c7d7597e5.jpg" alt="image" class="w-100 ">
-            </div>
-            <div class="col-10 border m-1 ">
-                <img src="https://i.pinimg.com/564x/5c/dd/80/5cdd80f73140d31dbd4688a767dbc27b.jpg" alt="image" class="w-100">
-            </div>
+        <div class="grid grid-cols-3 row justify-content-center px-32">
+            @foreach($user->posts as $post)
+                <a href="/p/{{$post->id}}">
+                    <img src="/storage/{{$post->image}}" class="w-100" alt="{{$post->caption}}">
+                </a>
+            @endforeach
+
 
         </div>
 
