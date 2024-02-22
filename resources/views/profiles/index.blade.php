@@ -77,7 +77,8 @@
         <div class="flex flex-row   justify-center my-16 mx-64 ">
             <div class=" mr-32  align-content-center ">
 
-                <img  src="https://pyxis.nymag.com/v1/imgs/031/f3a/3dc8d24958c4a3fd3a8487b49a7f71a45f-lofi-girl.1x.rsquare.w1400.png" alt="Profile picture" class="w-40 h-40 rounded-full" />
+                <img  src="{{$user->profile->profileImage()}}" alt="Profile picture" class="w-40 h-40 rounded-full" />
+
             </div>
             <div>
                 <div class="py-2"><h1 class="text-2xl">{{$user -> username}}</h1></div>
