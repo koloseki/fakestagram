@@ -14,7 +14,7 @@
                     <div class="row ">
                         <label for="title" class="col-md-4 col-form-label ">Title</label>
 
-                        <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') ?? $user->profile->title}}"  autocomplete="caption">
+                        <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') ?? $user->profile->title}}"  autocomplete="title">
 
                         @error('title')
                         <span class="invalid-feedback" role="alert">

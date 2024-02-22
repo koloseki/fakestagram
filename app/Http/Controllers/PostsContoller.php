@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Http\Request;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
@@ -21,12 +23,12 @@ class PostsContoller extends Controller
 
     public function store()
     {
-        $data = \request()->validate([
+        $data = request()->validate([
             'caption' => 'required',
             'image' => ['required','image'],
         ]);
 
-        $imagePath = \request('image')->store('uploads','public');
+        $imagePath = request('image')->store('uploads','public');
 
         $manager = new ImageManager(new Driver());
         $image = $manager->read(public_path("storage/{$imagePath}"));

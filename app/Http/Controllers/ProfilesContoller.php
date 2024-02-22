@@ -21,7 +21,7 @@ class ProfilesContoller extends Controller
             'title' => 'required',
             'description' => 'required',
             'url' => 'url',
-            'image' => 'image',
+            'image' => '',
 
         ]);
 
