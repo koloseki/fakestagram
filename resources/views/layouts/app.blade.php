@@ -18,7 +18,6 @@
 </head>
 <body>
     <div id="app flex col">
-
         <main>
             @yield('content')
         </main>

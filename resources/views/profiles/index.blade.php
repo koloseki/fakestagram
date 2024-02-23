@@ -35,7 +35,7 @@
                     <img src="/svg/navbar/create.svg" alt="Create icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <p class="select-none">Create</p>
                 </a>
-                <a role="button" href="/profile/{{$user->id}}/edit" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md ">
+                <a role="button" href="/profile/{{$user->id}}" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md ">
                     <img src="/svg/navbar/profile.svg" alt="Profile icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <p class="select-none">Profile</p>
                 </a>
@@ -81,7 +81,18 @@
 
             </div>
             <div>
-                <div class="py-2"><h1 class="text-2xl">{{$user -> username}}</h1></div>
+                <div class="flex align-items-center">
+                    <div class="py-2"><h1 class="text-2xl pr-6">{{$user -> username}}</h1></div>
+                    @can('update',$user->profile)
+                        <a role="button" href="/profile/{{$user->id}}/edit" class="btn-primary bg-gray-200 text-black px-3 py-1 font-extrabold rounded-md hover:bg-gray-300 active:bg-gray-100">
+                            Edit Profile
+                        </a>
+                    @endcan
+                    @cannot('update',$user->profile)
+                        <follow-button>t</follow-button>
+                        <button>Working</button>
+                    @endcannot
+                </div>
                 <div class="flex flex-row py-2 ">
                     <div class="pr-6"><strong class="pr-1">{{$user->posts->count()}}</strong>posts</div>
                     <div class="pr-6"><strong class="pr-1">1.1M</strong>followers</div>
