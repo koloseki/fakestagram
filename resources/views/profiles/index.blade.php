@@ -89,14 +89,13 @@
                         </a>
                     @endcan
                     @cannot('update',$user->profile)
-                        <follow-button>t</follow-button>
-                        <button>Working</button>
+                        <follow-button user-id="{{$user->id}}" follows="{{ $follows }}"></follow-button>
                     @endcannot
                 </div>
                 <div class="flex flex-row py-2 ">
                     <div class="pr-6"><strong class="pr-1">{{$user->posts->count()}}</strong>posts</div>
-                    <div class="pr-6"><strong class="pr-1">1.1M</strong>followers</div>
-                    <div class="pr-6"><strong class="pr-1">416</strong>following</div>
+                    <div class="pr-6"><strong class="pr-1">{{$user->profile->followers->count()}}</strong>followers</div>
+                    <div class="pr-6"><strong class="pr-1">{{$user->following->count()}}</strong>following</div>
                 </div>
                 <div class="py-2 bg">
                     <div>{{$user->profile->title}}</div>

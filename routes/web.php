@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/follow/{user}', [App\Http\Controllers\FollowsController::class,'store']);
+
 Route::get('logout', [\App\Http\Controllers\Auth\LoginController::class,'logout']);
 
 Route::get('/p/create', [App\Http\Controllers\PostsContoller::class, 'create']);
