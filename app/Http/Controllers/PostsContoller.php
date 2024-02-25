@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Http\Request;
@@ -14,6 +15,15 @@ class PostsContoller extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function index()
+    {
+        $users = auth()->user()->following()->pluck('profiles.user_id');
+
+        $posts = Post::whereIn('user_id',$users)->with('user')->latest()->paginate(5);
+
+        return view('posts.home', compact('posts'));
     }
 
     public function create()
