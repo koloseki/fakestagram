@@ -48,10 +48,18 @@
                     <img src="/svg/navbar/create.svg" alt="Create icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <a>Create</a>
                 </button>
-                <a role="button" href="{{ url('/home') }}" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md ">
-                    <img src="/svg/navbar/profile.svg" alt="Profile icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
-                    <p class="select-none">Profile</p>
-                </a>
+                @if(Auth::check())
+                    <a role="button" href="/profile/{{ Auth::profile->id() }}" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md ">
+                        <img src="/svg/navbar/profile.svg" alt="Profile icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
+                        <p class="select-none">Profile</p>
+                    </a>
+                @else
+                    <a role="button" href="{{ url('/login') }}" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md ">
+                        <img src="/svg/navbar/profile.svg" alt="Profile icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
+                        <p class="select-none">Profile</p>
+                    </a>
+                @endif
+
 
                 <div class="row-span-8">
 

@@ -87,5 +87,8 @@
             </div>
         </div>
     </div>
+    <div class="border p-4 mt-3 flex justify-content-center">
+        <p>Have an account?</p> <a href="/login" class="text-blue-400 font-extrabold pl-1">Log in</a>
+    </div>
 </div>
 @endsection

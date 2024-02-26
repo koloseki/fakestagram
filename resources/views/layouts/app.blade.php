@@ -19,9 +19,6 @@
 <body>
     <div id="app flex col">
         <main>
-            @if(auth())
-                @yield('sidebar')
-            @endif
             @yield('content')
         </main>
     </div>

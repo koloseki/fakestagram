@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
 
 Auth::routes();
+
+Route::get('/home',[App\Http\Controllers\PostsContoller::class , 'index']);
 
 Route::post('/follow/{user}', [App\Http\Controllers\FollowsController::class,'store']);
 
