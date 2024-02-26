@@ -1,12 +1,13 @@
 <x-mail::message>
 # Introduction
 
-The body of your message.
+Welcome to fakestagram ! <br>
+    Thanks for helping with testing.
 
-<x-mail::button :url="''">
-Button Text
+<x-mail::button :url="'fakestagram.xyz'">
+Take me there
 </x-mail::button>
 
-Thanks,<br>
-{{ config('app.name') }}
+Best regards<br>
+    <a href="https://github.com/koloseki">koloseki</a><br>
 </x-mail::message>

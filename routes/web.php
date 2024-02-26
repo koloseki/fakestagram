@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/email',[App\Mail\NewUserWelcomeMail::class , 'content']);
+
 Route::get('/home',[App\Http\Controllers\PostsContoller::class , 'index']);
 
 Route::post('/follow/{user}', [App\Http\Controllers\FollowsController::class,'store']);
