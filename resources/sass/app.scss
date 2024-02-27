@@ -1,6 +1,15 @@
 // Fonts
 @import url('https://fonts.bunny.net/css?family=Nunito');
 
+@font-face {
+    font-family: 'instagramfont';
+    src: url('../fonts/InstagramFont.otf') format('opentype');
+}
+
+body {
+    font-family: 'TwojaCzcionka', sans-serif;
+}
+
 // Variables
 @import 'variables';
 
