@@ -114,7 +114,7 @@
         <div class="grid grid-cols-3 row justify-content-center px-32">
             @foreach($user->posts as $post)
                 <a href="/p/{{$post->id}}">
-                    <img src="/storage/{{$post->image}}" class="w-100" alt="{{$post->caption}}">
+                    <img src="/storage/{{$post->image}}" class="w-100 hover:brightness-50 duration-100" alt="{{$post->caption}}">
                 </a>
             @endforeach
 

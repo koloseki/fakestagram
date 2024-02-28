@@ -5,7 +5,7 @@ Welcome to fakestagram ! <br>
     Thanks for helping with testing.
 
 <x-mail::button :url="'fakestagram.xyz'">
-Take me there
+Confirm Account
 </x-mail::button>
 
 Best regards<br>
