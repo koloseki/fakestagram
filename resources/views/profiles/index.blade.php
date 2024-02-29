@@ -2,9 +2,9 @@
 
 @section('content')
     <div id="app" class="antialiased flex col ">
-        <nav class="fixed flex-initial  sm:grid grid-cols-7 grid-rows-12  sm:items-center min-h-screen border-1 border-r   sm:h-1 ">
+        <nav class="fixed flex-initial  sm:grid grid-cols-7 grid-rows-12  sm:items-center min-h-screen border-1 border-r  z-1 sm:h-1">
             @if (Route::has('login'))
-                <button class="font-instagram sm:relative  ml-5 mt-5 row-span-1 col-span-3  text-2xl font-thin  active:text-gray-500">Fakestagram</button>
+                <button class="font-instagram sm:relative  ml-5 mt-5 pb-4 row-span-1 col-span-4  text-2xl font-thin  active:text-gray-500">Fakestagram</button>
 
 
                 <a role="button" href="{{'/home'}}" class="group col-span-7 flex hover:bg-gray-100 mx-4 my-2 py-3 rounded-md">
@@ -58,29 +58,29 @@
 
                 </a>
 
-                <button class="group mb-4 col-span-7 row-span-11 flex hover:bg-gray-100 mx-4 py-3 rounded-md">
-                    <img src="/svg/navbar/more.svg" alt="More icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
-                    <a>More</a>
-                </button>
+                <more-button></more-button>
 
-                <dialog open id="MoreDialog" class="sm:absolute top-0  m-0 p-6 text-right z-10 row-span-2 col-span-6 bg-red-400 ">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900  focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                        <a href="{{ route('logout') }}" class="font-semibold text-gray-600 hover:text-gray-900  focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Logout</a>
+                <dialog id="MoreDialog" class=" -z-20 bg-transparent" autofocus>
+                    <div class="flex flex-col text-center">
+                        @auth
+                            <a href="{{ route('logout') }}" class="w-96 px-6 py-3 font-extrabold  bg-gray-50 hover:bg-gray-100 rounded-3 ">Logout</a>
+                        @else
+                            <a href="{{ route('login') }}" class=" w-96 px-6 py-3 font-extrabold  bg-gray-50 hover:bg-gray-100 rounded-top-3 ">Log in</a>
 
-                    @else
-                        <a href="{{ route('login') }}" class="ml-4 px-3 py-1 font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded rounded-4 focus:outline focus:outline-2 focus:rounded-sm focus:outline-green-500">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold focus:outline focus:outline-2 focus:outline-amber-700">Register</a>
-                        @endif
-                    @endauth
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="w-96 px-6 py-3 font-extrabold bg-gray-50 hover:bg-gray-100 rounded-bottom-3 ">Register</a>
+                            @endif
+                        @endauth
+                    </div>
                 </dialog>
+
+
+
             @endif
 
         </nav>
 
-        <main class="flex-1 justify-content-center mx-64">
+        <main class="flex-1 justify-content-center mx-64 z-1">
         <div class="flex flex-row   justify-center my-16 mx-64 ">
             <div class=" mr-32  align-content-center ">
 

@@ -18,6 +18,9 @@ const app = createApp({});
 import ExampleComponent from './components/followButton.vue';
 app.component('follow-button', ExampleComponent);
 
+import MoreButton from './components/moreButton.vue';
+app.component('more-button',MoreButton);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

@@ -6,8 +6,10 @@
     src: url('/public/fonts/InstagramFont.otf') format('opentype');
 }
 
-body {
-    font-family: 'TwojaCzcionka', sans-serif;
+
+#MoreDialog::backdrop {
+    backdrop-filter: blur(2px) sepia(20%) saturate(2) contrast(90%);  /* Apply blur effect */
+    opacity: 0.7;
 }
 
 // Variables
