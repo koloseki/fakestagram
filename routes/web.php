@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/explore', [App\Http\Controllers\ExplorerController::class,'index']);
+
 Route::get('/email',[App\Mail\NewUserWelcomeMail::class , 'content']);
 
 Route::get('/home',[App\Http\Controllers\PostsContoller::class , 'index']);

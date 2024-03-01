@@ -19,7 +19,7 @@
 <body>
     <div id="app flex col">
         <main>
-
+            @yield('navigation')
             @yield('content')
         </main>
     </div>
