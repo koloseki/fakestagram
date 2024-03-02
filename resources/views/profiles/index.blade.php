@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
+@include('partials.navbar')
+
+
 @section('content')
-    <div id="app" class="antialiased flex col ">
-        @yield('navigation')
+    <div class="antialiased flex col ">
 
         <main class="flex-1 justify-content-center mx-64 z-1">
         <div class="flex flex-row   justify-center my-16 mx-64 ">

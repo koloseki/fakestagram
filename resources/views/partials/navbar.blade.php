@@ -1,9 +1,5 @@
-@extends('layouts.app')
-
-@section('content')
-    <div id="app">
+@section('navigation')
         <nav class="fixed flex-initial  sm:grid grid-cols-7 grid-rows-12  sm:items-center min-h-screen border-1 border-r  z-1 sm:h-1">
-            test
             @if (Route::has('login'))
                 <button class="font-instagram sm:relative  ml-5 mt-5 pb-4 row-span-1 col-span-4  text-2xl font-thin  active:text-gray-500">Fakestagram</button>
 
@@ -80,7 +76,5 @@
             @endif
 
         </nav>
-    </div>
-
 
 @endsection
