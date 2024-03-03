@@ -3,11 +3,9 @@
 @include('partials.navbar')
 
 @section('content')
-    <div class="antialiased flex-1 flex col ">
-
-        <main class="flex-1 justify-content-center  z-1">
-        <div class="flex flex-row   justify-center my-16  ">
-            <div class="  align-content-center ">
+    <main class="antialiased flex-1 justify-content-center  z-1">
+        <div class="flex flex-row   justify-center gap-10 my-16  ">
+            <div class="  align-content-center  ">
 
                 <img  src="{{$user->profile->profileImage()}}" alt="Profile picture" class="w-40 h-auto  rounded-full" />
 
@@ -16,7 +14,7 @@
                 <div class="flex align-items-center">
                     <div class="py-2"><h1 class="text-2xl pr-6">{{$user -> username}}</h1></div>
                     @can('update',$user->profile)
-                        <a role="button" href="/profile/{{$user->id}}/edit" class="btn-primary bg-gray-200 text-black px-3 py-1 font-extrabold rounded-md hover:bg-gray-300 active:bg-gray-100">
+                        <a role="button" href="/profile/{{$user->id}}/edit" class="btn-primary bg-gray-200 text-black px-2 py-1 font-extrabold rounded-md hover:bg-gray-300 active:bg-gray-100">
                             Edit Profile
                         </a>
                     @endcan
@@ -36,17 +34,17 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-3 row justify-content-center px-32">
-            @foreach($user->posts as $post)
-                <a href="/p/{{$post->id}}">
-                    <img src="/storage/{{$post->image}}" class="w-100 hover:brightness-50 duration-100" alt="{{$post->caption}}">
-                </a>
-            @endforeach
-
-
+        <div class="flex justify-center items-center">
+            <div class="grid grid-cols-3 gap-1 w-4/5 pb-16">
+                @foreach($user->posts as $post)
+                    <a href="/p/{{$post->id}}">
+                        <img src="/storage/{{$post->image}}" class="w-100 hover:brightness-50 duration-100" alt="{{$post->caption}}">
+                    </a>
+                @endforeach
+            </div>
         </div>
 
+
     </main>
-    </div>
 
 @endsection

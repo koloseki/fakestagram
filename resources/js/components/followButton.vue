@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <button @click="followUser" v-text="buttonText" class="btn-primary bg-blue-400 text-white px-3 py-1 font-extrabold rounded-md hover:bg-blue-500 active:bg-blue-600">
+        <button @click="followUser" :class="{ 'border text-blue-500 hover:text-white ': status, 'bg-blue-500 text-white hover:bg-blue-600': !status }" v-text="buttonText" class=" px-3 py-1 font-extrabold rounded-md hover:bg-blue-500 active:bg-blue-600 duration-100">
 
         </button>
     </div>

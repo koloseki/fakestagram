@@ -22,12 +22,9 @@
                             <div class="flex align-items-center">
                                 <p class="font-extrabold text-lg px-3"><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></p>
                                 |
-                                <a href="" class="pl-3 font-extrabold text-blue-400 hover:text-black">Follow</a>
-
-{{--                                Follow Button testing--}}
-{{--                                <div class="bg-amber-100">--}}
-{{--                                    <follow-button user-id="{{$user->id}}" follows="{{ $follows }}"></follow-button>--}}
-{{--                                </div>--}}
+                                <div>
+                                    <follow-button user-id="{{$post->user->id}}" :follows="{{ $post->user->follows ? 'false' : 'true' }}" ></follow-button>
+                                </div>
                             </div>
                         </div>
 

@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="row mt-2 mx-1">
-                            <a href="/home" role="button" class="btn btn-secondary  ">
+                            <a href="/profile/1" role="button" class="btn btn-secondary  ">
                                 {{ __('Continue without') }}
                             </a>
                         </div>
