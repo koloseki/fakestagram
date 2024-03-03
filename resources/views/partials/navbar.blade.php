@@ -1,8 +1,9 @@
 @section('navigation')
         <nav class="sticky top-0  flex-shrink-0 sm:grid grid-cols-7 grid-rows-12  sm:items-center min-h-screen border-1 border-r  z-1 sm:h-1">
             @if (Route::has('login'))
-                <button class="font-instagram sm:relative  ml-5 mt-5 pb-4 row-span-1 col-span-4  text-2xl font-thin  active:text-gray-500">Fakestagram</button>
-
+                <a href="http://fakestagram.xyz" class="sm:relative  ml-5 mt-5 pb-4 row-span-1 col-span-4">
+                    <button class="font-instagram   text-2xl font-thin  active:text-gray-500">Fakestagram</button>
+                </a>
 
                 <a role="button" href="{{'/home'}}" class="group col-span-7 flex hover:bg-gray-100 mx-4 my-2 py-3 rounded-md">
                     <img src="/svg/navbar/home.svg" alt="Home icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>

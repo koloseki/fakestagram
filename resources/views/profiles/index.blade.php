@@ -6,9 +6,7 @@
     <main class="antialiased flex-1 justify-content-center  z-1">
         <div class="flex flex-row   justify-center gap-10 my-16  ">
             <div class="  align-content-center  ">
-
                 <img  src="{{$user->profile->profileImage()}}" alt="Profile picture" class="w-40 h-auto  rounded-full" />
-
             </div>
             <div>
                 <div class="flex align-items-center">
@@ -30,7 +28,7 @@
                 <div class="py-2 bg">
                     <div>{{$user->profile->title}}</div>
                     <div>{{$user->profile->description}}</div>
-                    <div>{{$user->profile->url}}</div>
+                    <a href="{{$user->profile->url}}">{{$user->profile->url}}</a>
                 </div>
             </div>
         </div>
