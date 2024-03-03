@@ -17,7 +17,7 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="flex w-100">
         @yield('navigation')
         @yield('content')
     </div>

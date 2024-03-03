@@ -26,6 +26,13 @@ class PostsContoller extends Controller
         return view('posts.home', compact('posts'));
     }
 
+    public function index2()
+    {
+        $posts = Post::latest()->paginate(15);
+
+        return view('posts.explore', compact('posts'));
+    }
+
     public function create()
     {
         return view('posts.create');

@@ -2,15 +2,14 @@
 
 @include('partials.navbar')
 
-
 @section('content')
-    <div class="antialiased flex col ">
+    <div class="antialiased flex-1 flex col ">
 
-        <main class="flex-1 justify-content-center mx-64 z-1">
-        <div class="flex flex-row   justify-center my-16 mx-64 ">
-            <div class=" mr-32  align-content-center ">
+        <main class="flex-1 justify-content-center  z-1">
+        <div class="flex flex-row   justify-center my-16  ">
+            <div class="  align-content-center ">
 
-                <img  src="{{$user->profile->profileImage()}}" alt="Profile picture" class="w-40 h-40 rounded-full" />
+                <img  src="{{$user->profile->profileImage()}}" alt="Profile picture" class="w-40 h-auto  rounded-full" />
 
             </div>
             <div>

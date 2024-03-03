@@ -41,9 +41,7 @@ export default {
             return (this.status) ? 'Unfollow' : 'Follow';
         }
 
-
     },
-
 
 }
 </script>
