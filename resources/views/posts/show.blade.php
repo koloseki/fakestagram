@@ -18,7 +18,11 @@
                     <div class="flex align-items-center">
                         <p class="font-extrabold text-lg px-3"><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></p>
                         |
-                        <a href="" class="pl-3 font-extrabold text-blue-400 hover:text-black">Follow</a>
+                        <div>
+                            @cannot('update',$post->user->profile)
+                                <follow-button user-id="{{$post->user->id}}" :follows="{{ auth()->user() ? auth()->user()->following->contains($post->user->id) : false }}"></follow-button>
+                            @endcannot
+                        </div>
                     </div>
                 </div>
 

@@ -23,7 +23,7 @@
                                 <p class="font-extrabold text-lg px-3"><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></p>
                                 |
                                 <div>
-                                    <follow-button user-id="{{$post->user->id}}" :follows="{{ $post->user->follows ? 'false' : 'true' }}" ></follow-button>
+                                    <follow-button user-id="{{$post->user->id}}" :follows="{{ auth()->user() ? auth()->user()->following->contains($post->user->id) : false }}"></follow-button>
                                 </div>
                             </div>
                         </div>

@@ -24,7 +24,7 @@ class Profile extends Model
         return '/storage/' . $imagePath;
     }
 
-    public function followers()
+    public function followers(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(User::class);
     }

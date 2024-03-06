@@ -6,7 +6,7 @@
     <main class="antialiased flex-1 justify-content-center  z-1">
         <div class="flex flex-row   justify-center gap-10 my-16  ">
             <div class="  align-content-center  ">
-                <img  src="{{$user->profile->profileImage()}}" alt="Profile picture" class="w-40 h-auto  rounded-full" />
+                <img  src="{{$user->profile->profileImage()}}" alt="Profile picture" class="w-40 h-40  rounded-full" />
             </div>
             <div>
                 <div class="flex align-items-center">
@@ -36,7 +36,7 @@
             <div class="grid grid-cols-3 gap-1 w-4/5 pb-16">
                 @foreach($user->posts as $post)
                     <a href="/p/{{$post->id}}">
-                        <img src="/storage/{{$post->image}}" class="w-100 hover:brightness-50 duration-100" alt="{{$post->caption}}">
+                        <img src="{{ asset('storage/' . $post->image) }}" class="w-100 hover:brightness-50 duration-100" alt="{{ $post->caption }}">
                     </a>
                 @endforeach
             </div>
