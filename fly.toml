@@ -20,9 +20,17 @@ console_command = 'php /var/www/html/artisan tinker'
   LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
   SESSION_DRIVER = 'cookie'
   SESSION_SECURE_COOKIE = 'true'
+#Database
   DB_CONNECTION='mysql'
   DB_HOST='roundhouse.proxy.rlwy.net'
   DB_PORT=42715
+#Postmark
+  MAIL_MAILER='postmark'
+  MAIL_HOST='smtp.postmarkapp.com'
+  MAIL_PORT='587'
+  MAIL_ENCRYPTION='null'
+  MAIL_FROM_ADDRESS="welcome@fakestagram.xyz"
+  MAIL_FROM_NAME="fakestagram"
 
 [deploy]
   release_command = "php /var/www/html/artisan storage:link"
