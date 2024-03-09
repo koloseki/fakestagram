@@ -16,7 +16,7 @@
                         <div class="flex align-items-center p-6 border-b-2">
                             <div>
                                 <a href="/profile/{{$post->user->id}}">
-                                    <img src="{{$post->user->profile->profileImage()}}" class="rounded-circle w-16 h-16" alt="profile picture">
+                                    <img src="{{$post->user->profile->profileImage()}}" class="rounded-circle w-16 h-16 bg-gray-100" alt="profile picture">
                                 </a>
                             </div>
                             <div class="flex align-items-center">

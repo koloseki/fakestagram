@@ -7,7 +7,7 @@
         <div class="flex-1 mx-auto grid grid-cols-3 gap-1 justify-items-center w-75">
             @foreach($posts as $post)
                 <a href="/p/{{$post->id}}">
-                    <img src="/storage/{{$post->image}}" class="w-100 hover:brightness-75 duration-100" alt="{{$post->caption}}">
+                    <img src="/storage/{{$post->image}}" class="w-100 hover:brightness-75 duration-100 bg-gray-100" alt="{{$post->caption}}">
                 </a>
             @endforeach
         </div>

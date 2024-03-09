@@ -36,7 +36,7 @@
             <div class="grid grid-cols-3 gap-1 w-4/5 pb-16">
                 @foreach($user->posts as $post)
                     <a href="/p/{{$post->id}}">
-                        <img src="{{ asset('storage/' . $post->image) }}" class="w-100 hover:brightness-50 duration-100" alt="{{ $post->caption }}">
+                        <img src="{{ asset('storage/' . $post->image) }}" class="w-100 hover:brightness-50 duration-100 bg-gray-100" alt="{{ $post->caption }}">
                     </a>
                 @endforeach
             </div>
