@@ -17,8 +17,10 @@
                 </p>
 
                 @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
+                    <div class="flex justify-center items-center">
+                        <div class="alert alert-success flex flex-col items-center justify-center w-75" role="alert">
+                            {{ session('status') }}
+                        </div>
                     </div>
                 @endif
 
