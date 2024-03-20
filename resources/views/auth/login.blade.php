@@ -70,7 +70,7 @@
             </div>
 
             <div class="card py-4 px-14 mt-3 flex justify-content-center bg-gray-50 flex-row ">
-                <p>Don't have an account?</p> <a href="/register" class="text-blue-400 font-extrabold pl-1">Sign up</a>
+                <p>Don't have an account?</p> <a href="{{ route('register') }}" class="text-blue-400 font-extrabold pl-1">Sign up</a>
             </div>
 
             <div class="mt-16 flex justify-content-center">
