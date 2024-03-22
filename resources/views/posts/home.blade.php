@@ -3,12 +3,12 @@
 @include('partials.navbar')
 
 @section('content')
-    <div class="flex-1 ml-24 px-16 py-12">
+    <div class="flex-1 ml-24 px-16 py-12 space-y-12">
         @foreach($posts as $post)
             <div class="flex  flex-row ">
                 <div class="flex row border-dark justify-content-center ">
                     <a href="p/{{$post->id}}" class="row justify-content-center h-75 ">
-                        <img class="h-100 w-auto object-cover hover:" src="/storage/{{$post->image}}" alt="Post picture">
+                        <img class="h-auto max-h-[750px] max-w-full object-cover hover:" src="/storage/{{$post->image}}" alt="Post picture">
                     </a>
                 </div>
                 <div class="row col-4 ">

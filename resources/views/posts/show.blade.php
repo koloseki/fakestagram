@@ -3,17 +3,17 @@
 @include('partials.navbar')
 
 @section('content')
-    <div class="container flex flex-row ">
-        <div class="row">
-            <img class="max-h-screen" src="/storage/{{$post->image}}" alt="Post picture">
-        </div>
-        <div class="col-4 pl-16">
+    <div class="container flex justify-center items-center h-screen">
+        <div class="flex flex-col-reverse 2xl:flex-row 2xl:space-x-12">
+            <div class="row mt-12 2xl:mt-0">
+                <img class="w-auto max-h-[700px]" src="/storage/{{$post->image}}" alt="Post picture">
+            </div>
+        <div class=" 2xl:col-4 mt-24 2xl:mt-0">
             <div>
                 <div class="flex align-items-center p-6 border-b-2">
-                    <div class="pr-6">
+                    <div>
                         <a href="/profile/{{$post->user->id}}">
-                            <img src="{{$post->user->profile->profileImage()}}" class="rounded-circle w-16 h-16" alt="profile picture">
-                        </a>
+                            <img src="{{$post->user->profile->profileImage()}}" class="rounded-circle w-16 h-16 2xl:h-auto object-cover" alt="profile picture">                        </a>
                     </div>
                     <div class="flex align-items-center">
                         <p class="font-extrabold text-lg px-3"><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></p>
@@ -29,6 +29,7 @@
 
                 <p>{{$post->caption}}</p>
             </div>
+        </div>
         </div>
     </div>
 

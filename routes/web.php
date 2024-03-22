@@ -35,3 +35,6 @@ Route::get('/p/{post}' , [App\Http\Controllers\PostsContoller::class,'show']);
 Route::get('/profile/{user}', [App\Http\Controllers\ProfilesContoller::class, 'index'])->name('profile.show');
 Route::get('/profile/{user}/edit', [App\Http\Controllers\ProfilesContoller::class, 'edit'])->name('profile.edit');
 Route::patch('/profile/{user}',[App\Http\Controllers\ProfilesContoller::class,'update'])->name('profile.update');
+
+Route::get('/search',[App\Http\Controllers\SearchController::class , 'index']);
+

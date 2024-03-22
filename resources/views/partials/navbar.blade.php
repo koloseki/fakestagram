@@ -9,10 +9,10 @@
                     <img src="/svg/navbar/home.svg" alt="Home icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <p class="select-none">Home</p>
                 </a>
-                <button class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md">
+                <a role="button" href="/search" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md">
                     <img src="/svg/navbar/search.svg" alt="Search icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
-                    <a>Search</a>
-                </button>
+                    <p class="select-none">Search</p>
+                </a>
                 <a role="button" href="/explore" class="group col-span-7 flex hover:bg-gray-100 mx-4 py-3 rounded-md">
                     <img src="/svg/navbar/explore.svg" alt="Explore icon"  class="w-6 h-6 mx-3 group-hover:scale-125 duration-200"/>
                     <p class="select-none">Explore</p>
