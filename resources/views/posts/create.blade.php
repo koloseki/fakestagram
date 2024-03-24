@@ -10,11 +10,11 @@
                     <h1 class="text-3xl mb-4">Add New Post</h1>
 
                     <div class="form-group mb-4">
-                        <label for="image" class="block text-sm font-medium text-gray-700">Post Image</label>
-                        <div class="relative mt-1">
-                            <input type="file" id="image" name="image" class="opacity-0 absolute cursor-pointer">
-                            <label for="image" class="cursor-pointer bg-white rounded-md border border-gray-300 p-2 inline-block">Choose file</label>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Select Image</label>
+                            <input class="form-control" type="file" id="image" name="image">
                         </div>
+
                         @error('image')
                         <div class="text-red-500">{{ $message }}</div>
                         @enderror
