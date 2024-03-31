@@ -13,7 +13,8 @@
                 <div class="flex align-items-center p-6 border-b-2">
                     <div>
                         <a href="/profile/{{$post->user->id}}">
-                            <img src="{{$post->user->profile->profileImage()}}" class="rounded-circle w-16 h-16 2xl:h-auto object-cover" alt="profile picture">                        </a>
+                            <img src="{{$post->user->profile->profileImage()}}" class="rounded-circle w-16 h-16 2xl:h-auto object-cover" alt="profile picture">
+                        </a>
                     </div>
                     <div class="flex align-items-center">
                         <p class="font-extrabold text-lg px-3"><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></p>

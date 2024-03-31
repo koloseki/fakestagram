@@ -5,7 +5,7 @@
 @section('content')
     <div class="container flex justify-center items-center h-screen">
         <div class="mt-8 max-w-md mx-auto">
-            <form action="/search" method="GET" role="search">
+            <form action="/search/results" method="GET" role="search">
                 <div class="flex items-center border-b border-b-2 border-blue-400 py-2">
                     <div class="rounded-lg p-2">
                         <input id="search" class="bg-gray-50 appearance-none border-none w-full text-black text-xl py-2 px-4 leading-tight focus:outline-none active:outline-none" type="search" name="q" placeholder="Username">

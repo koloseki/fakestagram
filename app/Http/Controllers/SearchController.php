@@ -12,6 +12,7 @@ class SearchController extends Controller
     {
         return view('search.search');
     }
+
     public function search(Request $request)
     {
         $query = $request->input('q');

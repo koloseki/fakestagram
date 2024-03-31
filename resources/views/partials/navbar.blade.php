@@ -1,7 +1,7 @@
 @section('navigation')
         <nav class="sticky top-0  flex-shrink-0 sm:grid grid-cols-7 grid-rows-12  sm:items-center min-h-screen border-1 border-r  z-1 sm:h-1">
             @if (Route::has('login'))
-                <a href="http://fakestagram.xyz" class="sm:relative  ml-5 mt-5 pb-4 row-span-1 col-span-4">
+                <a href="https://fakestagram.fly.dev/" class="sm:relative  ml-5 mt-5 pb-4 row-span-1 col-span-4">
                     <button class="font-instagram   text-2xl font-thin  active:text-gray-500">Fakestagram</button>
                 </a>
 
