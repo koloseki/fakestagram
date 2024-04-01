@@ -23,7 +23,7 @@ Fakestagram is a Laravel project aimed at replicating the core functionalities o
 -  ✅ **User Following**: Follow other users to stay updated on their latest posts.
 - ❌  **Post Comments**: Engage in discussions by commenting on posts.
 - ❌  **Notifications**: Receive notifications for new followers and comments.
-- ❌  **Search Functionality**: Find and discover new users and posts easily.
+- ✅  **Search Functionality**: Find and discover new users easily.
 - ❌  **Messages**: Enjoy conversations with other users. Share text, images, and more in a secure messaging environment..
 - ❌  **Reels**: Create and discover short, engaging video content similar to Instagram Reels.
 
@@ -33,7 +33,7 @@ Fakestagram is a Laravel project aimed at replicating the core functionalities o
 
 Before you begin, make sure you have the following installed:
 
-- [PHP](https://www.php.net/) (>= 7.4)
+- [PHP](https://www.php.net/) (>= 8.2)
 - [Composer](https://getcomposer.org/)
 - [Node.js](https://nodejs.org/)
 - [NPM](https://www.npmjs.com/)
@@ -69,13 +69,21 @@ Before you begin, make sure you have the following installed:
     DB_USERNAME=your-database-username
     DB_PASSWORD=your-database-password
    ```
-5. Run database migrations:
+
+
+5. Connect storages
+    ```
+    php artisan storage:link
+    ```
+    for more information refer to : https://laravel.com/docs/11.x/filesystem
+   
+7. Run database migrations:
 
     ```
    php artisan migrate
    ```
 
-6. Start the development server:
+8. Start the development server:
 
     ```
    php artisan serve
@@ -87,7 +95,7 @@ Visit http://localhost:8000 in your browser to view the application.
 
 ## Usage
 Check out the online demo of Fakestagram [here](https://fakestagram.fly.dev).
-
+(Note it may not contain newest features)
 
 1. Register for a new account or log in if you already have one.
 2. Explore and enjoy the core features of Fakestagram.
