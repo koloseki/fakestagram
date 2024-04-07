@@ -23,7 +23,7 @@ Fakestagram is a Laravel project aimed at replicating the core functionalities o
 -  ✅ **User Following**: Follow other users to stay updated on their latest posts.
 - ❌  **Post Comments**: Engage in discussions by commenting on posts.
 - ❌  **Notifications**: Receive notifications for new followers and comments.
-- ❌  **Search Functionality**: Find and discover new users and posts easily.
+- ✅  **Search Functionality**: Find and discover new users and posts easily.
 - ❌  **Messages**: Enjoy conversations with other users. Share text, images, and more in a secure messaging environment..
 - ❌  **Reels**: Create and discover short, engaging video content similar to Instagram Reels.
 
@@ -61,6 +61,7 @@ Before you begin, make sure you have the following installed:
 
 4. Copy the .env.example file to create a .env file:
 
+    Configure connetion to the database
     ```
     DB_CONNECTION=mysql
     DB_HOST=your-database-host
@@ -68,7 +69,46 @@ Before you begin, make sure you have the following installed:
     DB_DATABASE=your-database-name
     DB_USERNAME=your-database-username
     DB_PASSWORD=your-database-password
+    ```
+    <h3>Recommended</h3>   
+    
+    Set a mail provider <br>
+    ```
+    MAIL_MAILER=smtp
+    MAIL_HOST=mailpit
+    MAIL_PORT=1025
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS="hello@example.com"
+    MAIL_FROM_NAME="${APP_NAME}"
    ```
+    Refer to [Documentation](https://laravel.com/docs/11.x/mail#main-content) to set it properly
+    <br><br>
+    
+    Set s3 for data storage  
+    ```
+    FILESYSTEM_DRIVER=s3
+    AWS_ACCESS_KEY_ID=
+    AWS_SECRET_ACCESS_KEY=
+    AWS_DEFAULT_REGION=eu-central-1
+    AWS_BUCKET=
+    AWS_USE_PATH_STYLE_ENDPOINT=false
+    ```
+   Else the app will save file locally <br>
+    If you want to know more about storage setup [Documentation](https://laravel.com/docs/11.x/filesystem#amazon-s3-compatible-filesystems)
+
+    <h3>Optional</h3>
+    Go to /tests set $fileToUpload to designated file full path, to test file and run:
+
+    ```
+    php .\test_s3.php
+   ```
+    If your connetion is set correctly you will get s3 link to the file, else you will an error.
+
+
+
+
 5. Run database migrations:
 
     ```
