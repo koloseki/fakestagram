@@ -33,7 +33,7 @@ Fakestagram is a Laravel project aimed at replicating the core functionalities o
 
 Before you begin, make sure you have the following installed:
 
-- [PHP](https://www.php.net/) (>= 7.4)
+- [PHP](https://www.php.net/) (>= 8.2)
 - [Composer](https://getcomposer.org/)
 - [Node.js](https://nodejs.org/)
 - [NPM](https://www.npmjs.com/)
@@ -107,15 +107,21 @@ Before you begin, make sure you have the following installed:
     If your connetion is set correctly you will get s3 link to the file, else you will an error.
 
 
+5. Connect storages
+    ```
+    php artisan storage:link
+    ```
+   for more information refer to : https://laravel.com/docs/11.x/filesystem
 
 
-5. Run database migrations:
+
+6. Run database migrations:
 
     ```
    php artisan migrate
    ```
 
-6. Start the development server:
+7. Start the development server:
 
     ```
    php artisan serve
@@ -128,6 +134,7 @@ Visit http://localhost:8000 in your browser to view the application.
 ## Usage
 Check out the online demo of Fakestagram [here](https://fakestagram.fly.dev).
 
+(Note it may not contain the newest features)
 
 1. Register for a new account or log in if you already have one.
 2. Explore and enjoy the core features of Fakestagram.
